@@ -1,4 +1,4 @@
-targets = BD4P.pdf
+targets = BD4Ppitch.pdf
 
 all: $(targets)
 
