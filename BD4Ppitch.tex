@@ -1,74 +1,170 @@
 \documentclass[a4paper,11pt]{article}
-\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm,asymmetric]{geometry}
+\usepackage[top=1.8cm,bottom=1.8cm,left=1.8cm,right=1.8cm,asymmetric]{geometry}
 \usepackage{url}
 \usepackage{paralist}
 \usepackage{authblk}
+\usepackage[sort&compress]{natbib}
 \usepackage[pdftex,colorlinks=true,hyperfootnotes=false]{hyperref}
 
-\title{A Data-Driven Innovation Strategy for Nesta}
+\title{\vspace{-3em}Innovation Policy-Making in the Big Data Era}
 
-\author[1]{Tom Crick\thanks{Tom Crick acknowledges support as Nesta's Data Science Fellow}}
-\author[2]{Juan Mateos-Garcia}
-\author[2]{Hasan Bakhshi}
-\author[2]{Stian Westlake}
-\affil[1]{Cardiff Metropolitan University}
-\affil[2]{Nesta}
-\affil[1]{\protect\url{tcrick@cardiffmet.ac.uk}}
-\affil[2]{\protect\url{{juan.mateos-garcia,hasan.bakhshi,stian.westlake}@nesta.org.uk}}
+\author{ }
+% \author[1]{Tom Crick\thanks{Tom Crick acknowledges support as Nesta's Data Science Fellow}}
+% \author[2]{Juan Mateos-Garcia}
+% \author[2]{Hasan Bakhshi}
+% \author[2]{Stian Westlake}
+% \affil[1]{Cardiff Metropolitan University}
+% \affil[2]{Nesta}
+% \affil[1]{\protect\url{tcrick@cardiffmet.ac.uk}}
+% \affil[2]{\protect\url{{juan.mateos-garcia,hasan.bakhshi,stian.westlake}@nesta.org.uk}}
 
-\renewcommand\Authands{ and }
-\def\UrlBreaks{\do\/\do-}
+% \renewcommand\Authands{ and }
+% \def\UrlBreaks{\do\/\do-}
 
 \date{ }
 
 \begin{document}
+
 \maketitle
 
+\vspace{-4em}
 % \begin{abstract}
 % \end{abstract}
 
-
 % 1000 word extended abstract
 
-% frame this from an innovation perspective...
+There has been an explosion of interest in the potential of big data
+as a driver of better decision-making in many policy areas, including
+innovation policy.  In this paper, we draw on the theory of
+innovation, and on Nesta's own
+experience\footnote{e.g. \url{http://www.nesta.org.uk/blog/big-data-better-innovation-policy}}
+as an innovation agency in order to address the following research
+questions:
 
-% what is innovation
-% who uses it?
-% policy instruments
-% moving from policy declarations to actual changes and impact
-% innovation foresight
-% RCs, Innovate UK
-% micro/macro innovation
-% platform-based innovation policies
+\begin{itemize}
+\item {\emph{What are the characteristics of innovation policy that make it a
+  suitable domain for the application of big data sources and
+  analytical methodologies?}}
+\item {\emph{What is the state of the art, and what are the emerging
+  opportunities for the application of big data for innovation policy?}}
+\end{itemize}
 
-% link this to {big,open,official,private} data
-% ethical/privacy e.g. health data
-% impact on behaviour/algorithms: Google Flu 
-% ``big data'' is not the panacea to all problems!
-% Estonia secure party transaction: JHD/Bath
+In doing this, we seek to provide a firmer conceptual grounding for
+work in this area, and to set a vision for the development of big data
+applications addressing the needs of innovation policymakers.
 
-% risk?
-% being agile in government e.g. GDS
+We begin by identifying the main rationales for innovation policy:
+{\emph{market failures}} linked to the fact that innovators often fail to
+fully capture the benefits of their investments, {\emph{systems failure}}
+caused by gaps in the ``system of innovation'' that ought to connect
+innovation agents, and {\emph{inhibited emergence}}, where a state of
+uncertainty about the future configuration of a market or technology
+field hinders its development~\citep{gustafsson+autio:2011}.
 
-% this is what Nesta want to do
-% here are some examples/case studies
-% this goes beyond mapping activity
-% analysis, impact assessment and policy interventions
-% remixing, sharing and reusing
-% cross-sectoral, not just siloed
-% methodological: tracking tech trends, not just sectors and industries
-% here's how government can support/faciliate/adopt/embrace
-% esp. around datasets and information sharing
-% mention technologies in this space: social network analysis, machine
-% learning, HPC, business intelligence, visualisation, etc.
- 
-% summary
-% five year plan?
-% vision for government
-% application across multiple sectors
-% potential use: short/medium/long term
+There are many policy options to remove these barriers to innovation,
+ranging from direct public investments on R\&D to regulation and
+procurement~\citep{edler-et-al:2013}. Their design, implementation and
+evaluation has traditionally been based on data sources such as
+business and innovation surveys, administrative data, and metrics of
+scientific and technological output (academic publications and
+patents)~\citep{fagerberg-et-al:2006}. Three defining characteristics
+of innovation do however limit the usefulness of these data sources
+and outputs for innovation policymaking:
 
-\bibliographystyle{unsrt}
+\begin{enumerate}
+\item {\textbf{Innovation involves novelty in inputs, processes and outputs:}} it
+  is associated with new capabilities, forms of organisation and
+  industries which, by definition, are not captured by existing
+  classifications of economic activity such as Standard Occupational
+  Classifications (SOC) and Standard Industrial Classifications
+  (SIC).
+\item {\textbf{Innovation is not confined to science and technology:}} it may
+  reflect changes in, say, business model, marketing or aesthetic: as
+  a result, it is not always captured by traditional metrics such as
+  academic papers and patents. 
+\item {\textbf{Innovation is a complex, networked process:}} it reflects a
+  dynamic combination of resources and capabilities of many different
+  agents and institutions. Measuring it requires combining data from a
+  multitude of these sources. In turn, those who stand to benefit from
+  access to data on innovation goes beyond policymakers, and
+  encompasses investors, entrepreneurs and corporates, to name a
+  few. However, in practice, most (aggregated, lagging) innovation
+  data outputs are of limited relevance for these agents.
+\end{enumerate}
+
+Big data can help overcome some of these challenges for innovation
+policymaking using conventional data inputs and outputs. Following
+~\citet{schroeder+cowls:2014}, we define big data as datasets of a
+volume, variety (complexity) and velocity unprecedented in the
+innovation policy domain, together with new analytical techniques and
+data outputs (such as data visualisations and interactive data
+platforms) used to analyse and create value from these data.
+
+Big datasets (e.g. information provided by businesses on their
+websites) are often unstructured and closer to real-time than official
+data. This means that they can be used to identify new innovation
+areas as they emerge, even when these do not respect traditional
+occupational or industry boundaries. Some metrics that policymakers
+use to measure innovation are steeped in scientific and technological
+understandings of innovation; big datasets, by expanding possible
+sources of data, need not be so constrained. Big data is
+high-resolution (when it is based on publicly available data, it is
+often possible to identify individual agents like businesses or
+investors in it in ways that official data, which is subject to
+non-disclosure constraints, is not). This makes it easier to republish
+it in interactive formats, say, that can be queried and exploited by a
+variety of innovation agents in addition to policymakers (this is
+manifest in the recent creation of a variety of online platforms to
+map innovative industries, clusters and ecosystems using, for example,
+publicly available data from Companies House).
+
+Big data is however no panacea for policymakers, and its use in
+innovation policy presents serious methodological
+challenges. Nevertheless, there exists significant policy work done in
+the open science space in which to analyse and
+leverage~\citep{rssaaoe:2012}. The innovation landscape is constantly
+shifting, leading to the arrival of new data sources to study, and
+structural changes that can impact the reliability of algorithmic data
+collection and analysis. There is a risk that online data sources
+might offer a biased representation of innovation activity that
+privileges digitised industries at the expense of those trading in
+physical goods and services, and consumer facing industries at the
+expense of business-to-business sectors. Privacy is of course another
+critical consideration, especially where personal information is
+involved~\citep{hocstc:2014}, but there is an imperative for open and
+sharable data to provide the platform for effective (and transparent)
+policy-making.
+
+Notwithstanding these important issues, we consider that there is
+significant scope for innovation in the use of big data for innovation
+policy -- we conclude this paper by outlining some of the main
+opportunities, and setting out Nesta's future programme of research
+and platform development in this space:
+
+\begin{enumerate}
+\item Go beyond innovation maps based on SOC and SIC coding and
+  official geographies, and make more use of unstructured data
+  collection and (supervised and unsupervised) classification methods.
+\item Complement descriptive analyses and sample-based
+  inference with predictive modelling.
+\item Explore the opportunities of real-time data and interactive
+  data visualisation for innovation policy.
+\item Combine big data sources with official and policy activity
+  data in order to evaluate innovation policy impacts.
+\item Develop standards for data-sharing so as to minimise the risk
+  of fragmentation into incompatible platforms capturing disparate
+  aspects of innovation activity.
+\item Develop open datasets and transparent (as compared to ``black
+  box'') methodologies for big data analysis.
+\item Creatively explore the potential use of big data sources and
+methods for the study of industries which may not currently be data
+science-literate -- and therefore less well catered for by online data
+-- but are of great importance for policymakers, such as
+manufacturing.
+\end{enumerate}
+
+
+\bibliographystyle{unsrtnat}
 \bibliography{BD4P}
 
 \end{document}
